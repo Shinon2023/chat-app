@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { PaperAirplaneIcon, PlusCircleIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import './globals.css';
 
+
 const Chatpage = () => {
     const router = useRouter();
     const { userid } = router.query;
