@@ -25,3 +25,15 @@ body {
     text-wrap: balance;
   }
 }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* ปรับความกว้างของ scrollbar ตามต้องการ */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #2d3748; /* สีพื้นหลังของแทร็ก scrollbar (ให้ตรงกับสี bg ของคุณ) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cfcfcf; /* สีของตัวเลื่อน scrollbar (ให้ตรงกับสี theme ของคุณ) */
+  border-radius: 5px; /* ปรับความโค้งมุมของตัวเลื่อน scrollbar ตามต้องการ */
+}
