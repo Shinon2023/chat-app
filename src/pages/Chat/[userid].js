@@ -129,7 +129,7 @@ const Chatpage = () => {
     };
 
     return (
-        <div className="flex h-screen bg-gray-800">
+        <div className="flex bg-gray-800">
             <div className="flex-1 p-8 ">
                 <div className="flex flex-col md:flex-row h-full">
                     {/* User Selection */}
