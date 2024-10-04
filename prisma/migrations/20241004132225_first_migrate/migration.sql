@@ -4,11 +4,11 @@ CREATE TABLE "User" (
     "username" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "profilePicture" TEXT,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "img" BYTEA,
     "accessRight" TEXT NOT NULL,
     "accessToken" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
@@ -20,7 +20,7 @@ CREATE TABLE "Profile" (
     "bio" TEXT NOT NULL,
     "address" TEXT NOT NULL,
     "nationalId" TEXT NOT NULL,
-    "nationalIdImgPath" TEXT NOT NULL,
+    "nationalIdImgUrl" BYTEA,
     "phoneNumber" TEXT NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE "Stock" (
     "name" TEXT NOT NULL,
     "amount" INTEGER NOT NULL,
     "category" TEXT,
-    "imgPath" TEXT NOT NULL,
+    "img" BYTEA,
 
     CONSTRAINT "Stock_pkey" PRIMARY KEY ("id")
 );
