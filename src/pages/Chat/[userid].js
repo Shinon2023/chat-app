@@ -131,9 +131,9 @@ const Chatpage = () => {
     return (
         <div className="flex bg-gray-800 custom-scrollbar h-screen sticky">
             <div className="flex-1 p-8 ">
-                <div className="flex flex-col md:flex-row h-full">
+                <div className="flex flex-row md:flex-row h-full">
                     {/* User Selection */}
-                    <div className="w-64 md:w-1/4 mb-4 md:mb-0 md:mr-4">
+                    <div className="w-64 md:w-1/4 mb-4 md:mb-0 md:mr-4 flex-col basis-1/4">
                         <h2 className="text-xl font-bold mb-2">Chats</h2>
                         <ul>
                             {users.map((user) => (
@@ -148,11 +148,11 @@ const Chatpage = () => {
                         </ul>
                     </div>
                     {/* Chat Area and Input Area */}
-                    <div className="flex-1 flex flex-col">
+                    <div className="flex-1 flex flex-col basis-3/4">
                         {/* Header */}
                         <header className="text-center text-4xl">
-                <h1>{user_self(userIdState)}</h1>
-            </header>
+                            <h1>{user_self(userIdState)}</h1>
+                        </header>
                         <div className="flex items-center justify-between mb-4">
                             <h1 className="text-2xl font-bold text-white">{selectedUser ? selectedUser.username : 'Select a user'}</h1>
                             <div className="flex space-x-2">
