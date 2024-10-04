@@ -15,7 +15,17 @@ const Chatpage = () => {
     const [selectedUser, setSelectedUser] = useState(null);
     const [users, setUsers] = useState([]);
 
-    //console.log('userid_1', userid);
+    //console.log('userid_1', userIdState);
+
+    const user_self = (userIdState) => {
+        if (userIdState === "qwertyuiop1") {
+            return "Tester1";
+        } else if (userIdState === "qwertyuiop2") {
+            return "Tester2";
+        } else {
+            return "Tester3";
+        }
+    }
 
     const generateConversationId = (user1Id, user2Id) => {
         return user1Id < user2Id ? `${user1Id}-${user2Id}` : `${user2Id}-${user1Id}`;
@@ -140,6 +150,9 @@ const Chatpage = () => {
                     {/* Chat Area and Input Area */}
                     <div className="flex-1 flex flex-col">
                         {/* Header */}
+                        <header className="text-center text-4xl">
+                <h1>{user_self(userIdState)}</h1>
+            </header>
                         <div className="flex items-center justify-between mb-4">
                             <h1 className="text-2xl font-bold text-white">{selectedUser ? selectedUser.username : 'Select a user'}</h1>
                             <div className="flex space-x-2">
