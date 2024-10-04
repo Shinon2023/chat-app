@@ -129,7 +129,7 @@ const Chatpage = () => {
     };
 
     return (
-        <div className="flex bg-gray-800 custom-scrollbar">
+        <div className="flex bg-gray-800 custom-scrollbar h-screen sticky">
             <div className="flex-1 p-8 ">
                 <div className="flex flex-col md:flex-row h-full">
                     {/* User Selection */}
